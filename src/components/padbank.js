@@ -2,6 +2,10 @@ import React from "react";
 import Drumpad from "./drumpad";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+/*
+padbank will be passed down with an array of object
+*/
+
 class PadBank extends React.Component{
     constructor(props){
         super(props);
@@ -11,7 +15,7 @@ class PadBank extends React.Component{
             return(<Drumpad />)
         })
         return(
-            <div>
+            <div className="button-container">
 
             </div>
         )
