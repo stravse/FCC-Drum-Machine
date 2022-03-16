@@ -5,7 +5,7 @@ class DisplaySwitchSound extends React.Component{
         return(
             <div className="switch-sound-container">
                 <div className="switch-text">Change Sound</div>
-                <button className="switch-button" onClick={this.props.changeSound} >{this.props.soundboard1? "Sound 2": "Sound 1"}</button>
+                <button className="switch-button" onClick={this.props.changeSound} >{this.props.soundBoard1? "Sound 2": "Sound 1"}</button>
             </div>
         )
     }

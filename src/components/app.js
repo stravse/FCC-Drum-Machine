@@ -122,7 +122,7 @@ class App extends React.Component{
         super(props);
         this.state = {
             soundBoard1: true,
-            currentDisplay: "",
+            currentDisplay: " ",
             power: true,
         }
         this.changeDisplay = this.changeDisplay.bind(this);
