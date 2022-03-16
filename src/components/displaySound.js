@@ -3,7 +3,7 @@ import React from "react";
 class DisplaySound extends React.Component{
     render(){
         return(
-            <div id="display">{this.props.display}</div>
+            <div id="display">{this.props.power? this.props.display: " "}</div>
         )
     }
 }

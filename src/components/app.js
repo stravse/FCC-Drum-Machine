@@ -150,9 +150,11 @@ class App extends React.Component{
         return(
             <div id="drum-machine" className="wrapper">
                 <PadBank objArray={this.state.soundBoard1? soundBoard1: soundBoard2} 
-                    changeDisplay={this.changeDisplay}
+                power={this.state.power}
+                changeDisplay={this.changeDisplay}
                 />
                 <DisplayUI display={this.state.currentDisplay} 
+                power={this.state.power}
                 changePower={this.changePower} 
                 changeSound={this.changeSound} 
                 soundBoard1={this.state.soundBoard1}
