@@ -33,7 +33,10 @@ class Drumpad extends React.Component{
         document.removeEventListener('keydown', this.handleKeyPress);
     }
     handleClick(){
-        this.props.onClick(); // will handle the changing of the display
+        const sound = document.getElementById(this.props.keyTrigger);
+        sound.currentTime = 0;
+        sound.play();
+        this.props.onClick(this.props.soundId); // will handle the changing of the display
         this.handleActive();
         setTimeout(()=> {this.handleActive()},100);
     }
@@ -49,7 +52,7 @@ class Drumpad extends React.Component{
     }
     render(){
         return(
-            <div className="btn btn-secondary" onClick={this.handleClick} style={this.state.active? activeStyle: inActiveStyle} >
+            <div id="this.props.soundId" className="drum-pad btn btn-secondary" onClick={this.handleClick} style={this.state.active? activeStyle: inActiveStyle} >
                 <audio className="clip" id={this.props.keyTrigger} src={this.props.url} />
                 {this.props.keyTrigger}
             </div>

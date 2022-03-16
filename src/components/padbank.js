@@ -13,9 +13,6 @@ padbank will be passed down with an array of object
 */
 
 class PadBank extends React.Component{
-    constructor(props){
-        super(props);
-    }
     render(){
         const objArray = this.props.objArray.map((objElement, index) => {
             return(<Drumpad 
@@ -24,6 +21,7 @@ class PadBank extends React.Component{
             keyTrigger={objElement.keyTrigger}
             url={objElement.url}
             soundId={objElement.id}
+            onClick={this.props.changeDisplay}
             />)
         })
         return(
