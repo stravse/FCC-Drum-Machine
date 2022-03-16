@@ -17,13 +17,21 @@ class PadBank extends React.Component{
         super(props);
     }
     render(){
-        const objArray = this.props.objArray.map((obj, index) => {
-            return(<Drumpad />)
+        const objArray = this.props.objArray.map((objElement, index) => {
+            return(<Drumpad 
+            key={objElement.id}
+            keyCode={objElement.keyCode}
+            keyTrigger={objElement.keyTrigger}
+            url={objElement.url}
+            soundId={objElement.id}
+            />)
         })
         return(
             <div className="button-container">
-
+                {objArray}
             </div>
         )
     }
 }
+
+export default PadBank;
