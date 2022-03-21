@@ -1,6 +1,7 @@
 import React from "react";
 import Drumpad from "./drumpad";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../scss/padbank.scss"
 
 /*
 padbank will be passed down with an array of object
@@ -36,7 +37,7 @@ class PadBank extends React.Component{
             )
         }
         return (
-            <div key={"row "+ j} className="row">
+            <div key={"row "+ j} className="pad-row">
                 {row}
             </div>
         );

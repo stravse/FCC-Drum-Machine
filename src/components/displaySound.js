@@ -1,9 +1,10 @@
 import React from "react";
+import "../scss/display.scss";
 
 class DisplaySound extends React.Component{
     render(){
         return(
-            <div id="display">{this.props.power? this.props.display: " "}</div>
+            <div className="display-text display-clip" id="display">{this.props.power? this.props.display: "MIXER OFF"}</div>
         )
     }
 }

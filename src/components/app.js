@@ -1,20 +1,16 @@
 import React from "react";
 import PadBank from "./padbank"
+import DisplayUI from "./displayUI";
 import { soundBoard1, soundBoard2 } from "./soundBoards";
 import "bootstrap/dist/css/bootstrap.min.css";
-import DisplayUI from "./displayUI";
-
-
-
-  
-
+import "../scss/app.scss"
 
 class App extends React.Component{
     constructor(props){
         super(props);
         this.state = {
             soundBoard1: true,
-            currentDisplay: " ",
+            currentDisplay: "MIXER ON",
             power: true,
         }
         this.changeDisplay = this.changeDisplay.bind(this);
@@ -29,6 +25,7 @@ class App extends React.Component{
     changeSound(){
         this.setState(state =>{ return{
             soundBoard1: !state.soundBoard1,
+            currentDisplay: String.fromCharCode(160),
         }})
     }
     changePower(){
@@ -39,7 +36,7 @@ class App extends React.Component{
     }
     render(){
         return(
-            <div id="drum-machine" className="container-fluid vh-100 d-flex justify-content-around align-items-center ">
+            <div id="drum-machine" className="wrapper">
                 <PadBank objArray={this.state.soundBoard1? soundBoard1: soundBoard2} 
                 power={this.state.power}
                 changeDisplay={this.changeDisplay}

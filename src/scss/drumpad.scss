@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+.drum-pad{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 0.3em;
+    width: 2.5em;
+    height: 2.5em;
+}
+.btn-neon{
+    border: 1px solid;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 150ms ease-in-out;
+    cursor: pointer;
+    font-size: 2em;
+    font-family: 'Nunito Sans', sans-serif;
+    border-color: #2de2e6;
+}
+.btn-neon-blue{
+    color: #2de2e6;
+    background-color: transparent;
+}
+.btn-neon-blue:hover,
+.btn-neon-blue-active{
+    background-color: #2de2e6;
+    color: #140420;
+}
