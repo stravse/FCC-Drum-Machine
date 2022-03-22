@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
+$neon-blue: #2de2e6;
+$neon-pink: #fc0174;
 .drum-pad{
     display: flex;
     align-items: center;
@@ -17,14 +19,14 @@
     cursor: pointer;
     font-size: 2em;
     font-family: 'Nunito Sans', sans-serif;
-    border-color: #2de2e6;
+    border-color: $neon-blue;
 }
 .btn-neon-blue{
-    color: #2de2e6;
+    color: $neon-blue;
     background-color: transparent;
 }
 .btn-neon-blue:hover,
 .btn-neon-blue-active{
-    background-color: #2de2e6;
+    background-color: $neon-blue;
     color: #140420;
 }

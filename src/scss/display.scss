@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
+$neon-blue: #2de2e6;
+$neon-pink: #fc0174;
 .display-text{
-    color: #fc0174;
+    color: $neon-blue;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1.5rem;
 }
@@ -20,8 +22,7 @@
 
 }
 .power-off{
-    background-color: #fc0174;
-    box-shadow: -3px -3px 5px #25abad;
+    background-color: $neon-pink;
 }
 .power-on{
     background-color: #e9bd1d;
@@ -35,4 +36,23 @@
     font-weight: 600;
     color: #140420;
     transition: 200ms ease-in-out;
+}
+.switch-button{
+    border: none;
+    border-radius: 6px;
+}
+.sound-container{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.display-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.volume{
+    margin-top: 1em;
 }

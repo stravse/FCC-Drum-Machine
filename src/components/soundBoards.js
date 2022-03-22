@@ -1,5 +1,5 @@
 
-const soundBoard1 = [
+const soundBoard1 = {name: "Heater-kit", clips:[
     {
       keyCode: 81,
       keyTrigger: 'Q',
@@ -54,9 +54,9 @@ const soundBoard1 = [
       id: 'Closed-HH',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
     }
-];
+]};
 
-const soundBoard2 = [
+const soundBoard2 = {name: "Smooth-Piano kit", clips:[
     {
       keyCode: 81,
       keyTrigger: 'Q',
@@ -111,6 +111,6 @@ const soundBoard2 = [
       id: 'Snare',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3'
     }
-];
+]};
 
 export {soundBoard1, soundBoard2};
