@@ -1,30 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-const activeStyle = {
-    backgroundColor: "#5c636a",
-    borderColor: "#565e64",
-    boxShadow: "",
-}
-const inActiveStyle = {
-    boxShadow: "5px 5px 7px grey",
-}
-/*
-keyCode
-keyTrigger
-url
-onClick
-*/
+import "../scss/index.scss";
 
 class Drumpad extends React.Component{
     constructor(props){
         super(props);
-        this.state ={
-            active: false,
-        }
         this.handleClick = this.handleClick.bind(this);
         this.handleKeyPress = this.handleKeyPress.bind(this);
-        this.handleActive = this.handleActive.bind(this);
     }
     componentDidMount(){
         document.addEventListener('keydown', this.handleKeyPress);
@@ -37,22 +19,18 @@ class Drumpad extends React.Component{
         sound.currentTime = 0;
         sound.play();
         this.props.onClick(this.props.soundId); // will handle the changing of the display
-        this.handleActive();
-        setTimeout(()=> {this.handleActive()},100);
+        sound.parentElement.classList.replace("btn-neon-blue", "btn-neon-blue-active")
+        setTimeout(()=> {sound.parentElement.classList.replace("btn-neon-blue-active", "btn-neon-blue")}, 150);
     }
     handleKeyPress(e){
         if (e.keyCode === this.props.keyCode){
             this.handleClick();
         }
     }
-    handleActive(){
-        this.setState(state =>{return{
-            active: !state.active,
-        }});
-    }
+
     render(){
         return(
-            <div id="this.props.soundId" className="drum-pad btn btn-secondary" onClick={this.handleClick} style={this.state.active? activeStyle: inActiveStyle} >
+            <div id={this.props.soundId} className="drum-pad btn-neon btn-neon-blue" onClick={this.handleClick}>
                 <audio className="clip" id={this.props.keyTrigger} src={this.props.url} />
                 {this.props.keyTrigger}
             </div>
