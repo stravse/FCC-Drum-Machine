@@ -1,7 +1,7 @@
 import React from "react";
 import Drumpad from "./drumpad";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../scss/padbank.scss"
+import "../scss/index.scss"
 
 /*
 padbank will be passed down with an array of object

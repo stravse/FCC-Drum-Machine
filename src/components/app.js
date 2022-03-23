@@ -3,7 +3,7 @@ import PadBank from "./padbank"
 import DisplayUI from "./displayUI";
 import { soundBoard1, soundBoard2 } from "./soundBoards";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../scss/app.scss"
+import "../scss/index.scss";
 
 class App extends React.Component{
     constructor(props){
@@ -49,9 +49,19 @@ class App extends React.Component{
 
     render(){
         const clips = document.getElementsByClassName("clip");
+        const drumPad = document.getElementsByClassName("drum-pad")
         clips.forEach(sound => {
             sound.volume = this.state.volume/100;
         });
+        if (!this.state.power){
+            drumPad.forEach(drum => {
+                drum.classList.replace("btn-neon-blue", "btn-neon-blue-active")
+            })
+        } else {
+            drumPad.forEach(drum =>{
+                drum.classList.replace("btn-neon-blue-active","btn-neon-blue");
+            })
+        }
         return(
             <div id="drum-machine" className="wrapper">
                 <PadBank objArray={this.state.soundBoard1? soundBoard1.clips: soundBoard2.clips} 
@@ -64,6 +74,7 @@ class App extends React.Component{
                 changeSound={this.changeSound} 
                 changeVolume={this.changeVolume}
                 soundBoard1={this.state.soundBoard1}
+                volume={this.state.volume}
                 />
             </div>
         )

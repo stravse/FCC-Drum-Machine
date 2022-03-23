@@ -13,36 +13,38 @@ $neon-pink: #fc0174;
     align-items: center;
     width: 100%;
     color: #1cdf15;
+    margin-top: 0.5em;
 }
 .power-container{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2em;
-
-}
-.power-off{
-    background-color: $neon-pink;
-}
-.power-on{
-    background-color: #e9bd1d;
-    box-shadow: 3px 3px 5px #ff6c11;
 }
 .power-button{
     border-radius: 50%;
     border: none;
-    width: 2.5em;
-    height: 2.5em;
+    width: 3em;
+    height: 3em;
     font-weight: 600;
-    color: #140420;
+    background-color: transparent;
     transition: 200ms ease-in-out;
+    border: 2px solid;
+    
 }
-.switch-button{
-    border: none;
-    border-radius: 6px;
+.power-off{
+    border-color: $neon-pink;
+    color: $neon-pink;
+    box-shadow: 3px 3px 10px $neon-pink;
 }
+.power-on{
+    border-color: #e9bd1d;
+    color: #e9bd1d;
+    box-shadow: 3px 3px 10px #ff6c11;
+}
+
 .sound-container{
-    margin-top: 1em;
+    margin-top: 0.5em;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -54,5 +56,24 @@ $neon-pink: #fc0174;
     align-items: center;
 }
 .volume{
-    margin-top: 1em;
+    margin-top: 0.5em;
+}
+.switch-button{
+    border: none;
+    border-radius: 6px;
+    transition: 200ms ease-in;
+    font-weight: 600;
+    background-color: transparent;
+    padding: 0.2em;
+}
+.switch-off{
+    border: 1px solid #afd7fa;
+    color: #afd7fa;
+    box-shadow: 3px 3px 10px #afd7fa;
+}
+.switch-on{
+    border: 1px solid #ff7486;
+    color: #ff7486;
+    box-shadow: 3px 3px 10px #ff7486;
+    
 }

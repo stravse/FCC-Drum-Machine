@@ -1,5 +1,5 @@
 import React from "react";
-import "../scss/display.scss";
+import "../scss/index.scss";
 
 class DisplaySound extends React.Component{
     render(){

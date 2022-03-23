@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../scss/drumpad.scss";
+import "../scss/index.scss";
 
 class Drumpad extends React.Component{
     constructor(props){
@@ -30,7 +30,7 @@ class Drumpad extends React.Component{
 
     render(){
         return(
-            <div id="this.props.soundId" className="drum-pad btn-neon btn-neon-blue" onClick={this.handleClick}>
+            <div id={this.props.soundId} className="drum-pad btn-neon btn-neon-blue" onClick={this.handleClick}>
                 <audio className="clip" id={this.props.keyTrigger} src={this.props.url} />
                 {this.props.keyTrigger}
             </div>
