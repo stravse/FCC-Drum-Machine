@@ -19,8 +19,11 @@ class Drumpad extends React.Component{
         sound.currentTime = 0;
         sound.play();
         this.props.onClick(this.props.soundId); // will handle the changing of the display
-        sound.parentElement.classList.replace("btn-neon-blue", "btn-neon-blue-active")
-        setTimeout(()=> {sound.parentElement.classList.replace("btn-neon-blue-active", "btn-neon-blue")}, 150);
+        if (sound.parentElement.classList.contains("btn-neon-blue")){
+            sound.parentElement.classList.replace("btn-neon-blue", "btn-neon-blue-active")
+            setTimeout(()=> {sound.parentElement.classList.replace("btn-neon-blue-active", "btn-neon-blue")}, 150);
+        }
+        
     }
     handleKeyPress(e){
         if (e.keyCode === this.props.keyCode){
