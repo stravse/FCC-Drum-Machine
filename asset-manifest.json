@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/FCC-Drum-Machine/static/css/main.ddb113fb.css",
+    "main.css": "/FCC-Drum-Machine/static/css/main.fcc75e12.css",
     "main.js": "/FCC-Drum-Machine/static/js/main.28e5a136.js",
     "index.html": "/FCC-Drum-Machine/index.html",
-    "main.ddb113fb.css.map": "/FCC-Drum-Machine/static/css/main.ddb113fb.css.map",
+    "main.fcc75e12.css.map": "/FCC-Drum-Machine/static/css/main.fcc75e12.css.map",
     "main.28e5a136.js.map": "/FCC-Drum-Machine/static/js/main.28e5a136.js.map"
   },
   "entrypoints": [
-    "static/css/main.ddb113fb.css",
+    "static/css/main.fcc75e12.css",
     "static/js/main.28e5a136.js"
   ]
 }
