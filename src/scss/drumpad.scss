@@ -25,8 +25,11 @@
     color: $neon-blue;
     background-color: transparent;
 }
+.btn-neon-blue:hover,
 .btn-neon-blue-active{
     background-color: $neon-blue;
     color: #140420;
+}
+.btn-neon-blue-active{
     cursor: default;
 }
