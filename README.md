@@ -22,4 +22,6 @@ This is my answer for the project in the Front-End-Library course project in FCC
 
 ### Things that didn't make it in the final product
 - Most things that I want to implement has been implemented
+- Tried to use bootsrap throughout the project but wasn't comfortable going through documentation and making classNames long
+- I find raw scss/css to be more powerful than relying on bootstrap for the things that I want to use
 - The only problem is with when a mobile user click it just show clicked not turned back to normal state
